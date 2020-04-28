@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// import Test from "./Test";
 
 class App extends Component {
   state = {
@@ -17,10 +18,18 @@ class App extends Component {
       value: this.refs.theTextInput.value,
     });
   };
+
+  // inputRef = (text) => this.setState((prev) => ({ ...prev, value: text }));
+
   renderEditView = () => {
     return (
       <div>
-        <input type="text" defaultValue={this.state.value} ref="theTextInput" />
+        {/* <input
+          type="text"
+          defaultValue={this.state.value}
+          ref={this.inputRef}
+        /> */}
+
         <button onClick={this.changeEditMode}>Cancel</button>
         <button onClick={this.updateComponentValue}>Save</button>
       </div>
